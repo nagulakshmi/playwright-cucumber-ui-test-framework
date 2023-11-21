@@ -1,0 +1,11 @@
+[2023-11-22 01:20:49 [32minfo[39m]: Starting the testsuite execution
+[2023-11-22 01:20:49 [32minfo[39m]: Starting "chrome" browser for test execution
+[2023-11-22 01:20:49 [32minfo[39m]: Executing scenario: "Verify Single Borrower Calculation"
+[2023-11-22 01:20:50 [32minfo[39m]: Launch the application
+[2023-11-22 01:20:50 [32minfo[39m]: The status of the test case is:= PASSED
+[2023-11-22 01:20:50 [32minfo[39m]: Executing scenario: "Start Joint Borrowing calculator"
+[2023-11-22 01:20:50 [32minfo[39m]: Launch the application
+[2023-11-22 01:20:50 [32minfo[39m]: The status of the test case is:= PASSED
+[2023-11-22 01:20:50 [32minfo[39m]: Executing scenario: "Test to capture error scenario"
+[2023-11-22 01:20:50 [32minfo[39m]: Launch the application
+[2023-11-22 01:20:50 [32minfo[39m]: The status of the test case is:= PASSED

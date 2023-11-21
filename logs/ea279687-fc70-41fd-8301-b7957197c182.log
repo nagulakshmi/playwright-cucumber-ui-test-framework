@@ -1,0 +1,4 @@
+[2023-11-22 01:22:50 [32minfo[39m]: Starting the testsuite execution
+[2023-11-22 01:22:50 [32minfo[39m]: Starting "chrome" browser for test execution
+[2023-11-22 01:22:50 [32minfo[39m]: Executing scenario: "Verify Single Borrower Calculation"
+[2023-11-22 01:22:51 [32minfo[39m]: Launch the application

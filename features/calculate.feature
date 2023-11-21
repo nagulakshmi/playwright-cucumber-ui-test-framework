@@ -1,10 +1,12 @@
 Feature: Borrowing capacity calculator
 
+  Background:
+    Given I launch borrowing capacity calculator application
+
   @smoke
   Scenario: Verify Single Borrower Calculation
-    Given I launch borrowing capacity calculator application
     Then I select "Single" as application type
-    And I select "0" as number of dependents
+    And I select "1" as number of dependents
     And I select "Home to live in" as property you would like to buy
     And I enter "Your income (before tax)" as "80000"
     And I enter "Your other income" as "10000"
@@ -18,8 +20,7 @@ Feature: Borrowing capacity calculator
     And I capture the current screen for reference
 
   @smoke
-  Scenario: Start over Borrowing calculator
-    Given I launch borrowing capacity calculator application
+  Scenario: Start Joint Borrowing calculator
     Then I select "Joint" as application type
     And I select "2" as number of dependents
     And I select "Residential investment" as property you would like to buy
@@ -49,7 +50,6 @@ Feature: Borrowing capacity calculator
 
   @smoke
   Scenario:  Test to capture error scenario
-    Given I launch borrowing capacity calculator application
     Then I select "Single" as application type
     And I select "0" as number of dependents
     And I select "Home to live in" as property you would like to buy

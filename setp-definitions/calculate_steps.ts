@@ -1,15 +1,20 @@
-const {When, Then} = require("@cucumber/cucumber")
+import calculatePage from "../pages/CalculatePage"
+import {When, Then} from "@cucumber/cucumber"
 
 Then('I select {string} as application type', async (applicationType) => {
+    calculatePage.selectApplicationType(applicationType)
 })
 
 Then('I select {string} as number of dependents', async (expectedValue) => {
+    calculatePage.selectDependentDropdown(expectedValue)
 })
 
 Then('I select {string} as property you would like to buy', async (propertyType) => {
+    calculatePage.selectPropertyType(propertyType)
 })
 
 Then('I enter {string} as {string}', async (labelText, income) => {
+    calculatePage.enterIncomeBeforeTax(labelText, income)
 })
 
 Then('I feed {string} as {string}', async (labelText, value) => {

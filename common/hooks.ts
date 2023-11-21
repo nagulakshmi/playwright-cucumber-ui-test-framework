@@ -1,8 +1,10 @@
-import { After, AfterAll, Before, BeforeAll, ITestCaseHookParameter } from "@cucumber/cucumber"
+import { After, AfterAll, Before, BeforeAll, ITestCaseHookParameter, setDefaultTimeout } from "@cucumber/cucumber"
 import logger from "../utils/logger"
 import scope from "./scope"
 import appConfig from "../utils/appConfig"
 import { chromium, firefox } from "playwright"
+
+setDefaultTimeout(appConfig.cucumberTimeout)
 
 BeforeAll(async function() {
     logger.info("Starting the testsuite execution")
@@ -39,7 +41,7 @@ const resolveBrowser = async() => {
 
     const lanuchOptions: any = {
         headless: appConfig.headless,
-        slowMo: 250
+        slowMo: 0
     }
 
     logger.info("Starting \"%s\" browser for test execution", process.env.BROWSER_TYPE)
