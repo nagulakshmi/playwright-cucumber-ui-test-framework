@@ -4,11 +4,233 @@
     "elements": [
       {
         "description": "",
-        "id": "borrowing-capacity-calculator;test-2---start-over-borrowing-calculator",
+        "id": "borrowing-capacity-calculator;verify-single-borrower-calculation",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "Verify Single Borrower Calculation",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 739180186
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I launch borrowing capacity calculator application",
+            "match": {
+              "location": "setp-definitions/lauch_steps.ts:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13083889
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I select \"Single\" as application type",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7636696
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I select \"0\" as number of dependents",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3144892
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "I select \"Home to live in\" as property you would like to buy",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4738297
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I enter \"Your income (before tax)\" as \"80000\"",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10007798
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I enter \"Your other income\" as \"10000\"",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 367251
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I feed \"Living expenses\" as \"500\"",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2537435
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I feed \"Current home loan repayments\" as \"0\"",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 527089
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "I feed \"Other loan repayments\" as \"140\"",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 154880
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I enter \"Other commitments\" as \"0\"",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 156766
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "I feed \"Total credit card limits\" as \"10000\"",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 147724
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "I click on \"Work out how much I could borrow\" to calculate",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2110285
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "I should see borrowing estimate as \"$500,000\"",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2202024
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 18,
+            "name": "I capture the current screen for reference",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1635483
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 983997
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 3
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "borrowing-capacity-calculator;start-over-borrowing-calculator",
         "keyword": "Scenario",
         "line": 21,
-        "name": "Test 2 - Start over Borrowing calculator",
+        "name": "Start over Borrowing calculator",
         "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 146970413
+            }
+          },
           {
             "arguments": [],
             "keyword": "Given ",
@@ -19,7 +241,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 7383435
+              "duration": 136374
             }
           },
           {
@@ -32,7 +254,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 5793838
+              "duration": 457591
             }
           },
           {
@@ -45,7 +267,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3140436
+              "duration": 401316
             }
           },
           {
@@ -58,7 +280,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 4815655
+              "duration": 294656
             }
           },
           {
@@ -71,7 +293,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 8466559
+              "duration": 150215
             }
           },
           {
@@ -84,7 +306,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 380181
+              "duration": 209913
             }
           },
           {
@@ -97,7 +319,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2661487
+              "duration": 158706
             }
           },
           {
@@ -110,7 +332,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 390969
+              "duration": 131428
             }
           },
           {
@@ -123,7 +345,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 149102
+              "duration": 119581
             }
           },
           {
@@ -136,7 +358,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 182121
+              "duration": 115280
             }
           },
           {
@@ -149,7 +371,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 147645
+              "duration": 113677
             }
           },
           {
@@ -162,7 +384,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2241807
+              "duration": 286564
             }
           },
           {
@@ -175,7 +397,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2252442
+              "duration": 256280.99999999997
             }
           },
           {
@@ -188,7 +410,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1215345
+              "duration": 99205
             }
           },
           {
@@ -201,7 +423,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 1768668
+              "duration": 1408164
             }
           },
           {
@@ -214,7 +436,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 359940
+              "duration": 107028
             }
           },
           {
@@ -227,7 +449,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2802263
+              "duration": 2453851
             }
           },
           {
@@ -240,7 +462,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 3606981
+              "duration": 3537076
             }
           },
           {
@@ -253,7 +475,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 399447
+              "duration": 412276
             }
           },
           {
@@ -266,7 +488,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2065629
+              "duration": 4196028
             }
           },
           {
@@ -279,7 +501,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 354320
+              "duration": 390740
             }
           },
           {
@@ -292,7 +514,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 10000630
+              "duration": 2046755
             }
           },
           {
@@ -305,7 +527,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 360836
+              "duration": 402670
             }
           },
           {
@@ -318,7 +540,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 132966
+              "duration": 143236
             }
           },
           {
@@ -331,7 +553,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 137990
+              "duration": 160981
             }
           },
           {
@@ -344,7 +566,15 @@
             },
             "result": {
               "status": "passed",
-              "duration": 110620
+              "duration": 234827
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 618112
             }
           }
         ],
@@ -358,11 +588,19 @@
       },
       {
         "description": "",
-        "id": "borrowing-capacity-calculator;test-3---test-to-capture-error-scenario",
+        "id": "borrowing-capacity-calculator;test-to-capture-error-scenario",
         "keyword": "Scenario",
         "line": 51,
-        "name": "Test 3 - Test to capture error scenario",
+        "name": "Test to capture error scenario",
         "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 337411823
+            }
+          },
           {
             "arguments": [],
             "keyword": "Given ",
@@ -373,7 +611,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 116372
+              "duration": 149849
             }
           },
           {
@@ -386,7 +624,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 268863
+              "duration": 136482
             }
           },
           {
@@ -399,7 +637,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 247256
+              "duration": 123013
             }
           },
           {
@@ -412,7 +650,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 237893
+              "duration": 163501
             }
           },
           {
@@ -425,7 +663,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 136745
+              "duration": 313238
             }
           },
           {
@@ -438,7 +676,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 107553
+              "duration": 132364
             }
           },
           {
@@ -451,7 +689,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 128202.00000000001
+              "duration": 135190
             }
           },
           {
@@ -464,7 +702,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 104836
+              "duration": 138341
             }
           },
           {
@@ -477,7 +715,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 100867
+              "duration": 338052
             }
           },
           {
@@ -490,7 +728,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 103921
+              "duration": 136695
             }
           },
           {
@@ -503,7 +741,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 104619
+              "duration": 178724
             }
           },
           {
@@ -516,7 +754,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 336916
+              "duration": 127640
             }
           },
           {
@@ -529,7 +767,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 271484
+              "duration": 171109
             }
           },
           {
@@ -542,7 +780,15 @@
             },
             "result": {
               "status": "passed",
-              "duration": 136674
+              "duration": 143210
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1329206
             }
           }
         ],

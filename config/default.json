@@ -1,3 +1,4 @@
 {
-    "baseUrl": "https://www.anz.com.au/personal/home-loans/calculators-tools/much-borrow/"
+    "baseUrl": "https://www.anz.com.au/personal/home-loans/calculators-tools/much-borrow/",
+    "playwrightPageDefaultTimeout": 180000
 }

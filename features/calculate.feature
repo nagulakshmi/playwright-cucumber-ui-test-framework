@@ -1,7 +1,7 @@
 Feature: Borrowing capacity calculator
 
-  @DEV
-  Scenario: Test 1 - Verify Single Borrower Calculation
+  @smoke
+  Scenario: Verify Single Borrower Calculation
     Given I launch borrowing capacity calculator application
     Then I select "Single" as application type
     And I select "0" as number of dependents
@@ -18,7 +18,7 @@ Feature: Borrowing capacity calculator
     And I capture the current screen for reference
 
   @smoke
-  Scenario: Test 2 - Start over Borrowing calculator
+  Scenario: Start over Borrowing calculator
     Given I launch borrowing capacity calculator application
     Then I select "Joint" as application type
     And I select "2" as number of dependents
@@ -48,7 +48,7 @@ Feature: Borrowing capacity calculator
 
 
   @smoke
-  Scenario: Test 3 - Test to capture error scenario
+  Scenario:  Test to capture error scenario
     Given I launch borrowing capacity calculator application
     Then I select "Single" as application type
     And I select "0" as number of dependents
