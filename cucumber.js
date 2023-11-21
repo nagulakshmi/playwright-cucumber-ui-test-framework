@@ -17,7 +17,7 @@ const output_file = 'output/test_results.json'
 
 let common = [
     current_tag,
-    '--require-module common/hooks.ts',
+    '--require common/hooks.ts',
     '--require-module ts-node/register',
     current_parrellel_thread,
     current_feature,

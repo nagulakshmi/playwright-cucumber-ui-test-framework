@@ -1,0 +1,79 @@
+{
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "extends": [
+        "plugin:ui-testing/playwright",
+        "eslint:recommended"
+    ],
+    "plugins": [
+        "@typescript-eslint",
+        "@typescript-eslint/eslint-plugin",
+        "import"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "project": "./tsconfig.json"
+    },
+    "settings": {
+        "import/parsers": {
+            "@typescript-eslint/parser": [
+                ".ts",
+                ".tsx"
+            ]
+        },
+        "import/resolver": {
+            "node": {
+                "extensions": [
+                    ".ts",
+                    ".tsx"
+                ]
+            },
+            "typescript": {
+                "directory": "."
+            }
+        }
+    },
+    "rules": {
+        "import/first": "error",
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "ts": "never",
+                "tsx": "never"
+            }
+        ],
+        "@typescript-eslint/typedef": [
+            "error",
+            {
+                "variableDeclaration": true,
+                "memberVariableDeclaration": true,
+                "variableDeclarationIgnoreFunction": true,
+                "parameter": true,
+                "propertyDeclaration": true,
+                "arrowParameter": true
+            }
+        ],
+        "semi": [
+            2,
+            "never"
+        ],
+        "no-undef": "error",
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": [
+            "error"
+        ],
+        "import/prefer-default-export": "off",
+        "@typescript-eslint/no-empty-function": [
+            "error"
+        ]
+
+
+    }
+}
