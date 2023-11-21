@@ -22,4 +22,4 @@ const logger: Logger = createLogger({
     )
 })
 
-// export default logger
+export default logger

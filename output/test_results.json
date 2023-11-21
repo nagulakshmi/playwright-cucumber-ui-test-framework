@@ -1,1 +1,565 @@
-[]
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "borrowing-capacity-calculator;test-2---start-over-borrowing-calculator",
+        "keyword": "Scenario",
+        "line": 21,
+        "name": "Test 2 - Start over Borrowing calculator",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 22,
+            "name": "I launch borrowing capacity calculator application",
+            "match": {
+              "location": "setp-definitions/lauch_steps.ts:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7383435
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 23,
+            "name": "I select \"Joint\" as application type",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5793838
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "I select \"2\" as number of dependents",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3140436
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 25,
+            "name": "I select \"Residential investment\" as property you would like to buy",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4815655
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I enter \"Your income (before tax)\" as \"180000\"",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8466559
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "I enter \"Your other income\" as \"0\"",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 380181
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 28,
+            "name": "I feed \"Living expenses\" as \"1500\"",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2661487
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "I feed \"Current home loan repayments\" as \"2200\"",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 390969
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 30,
+            "name": "I feed \"Other loan repayments\" as \"340\"",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 149102
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 31,
+            "name": "I enter \"Other commitments\" as \"100\"",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 182121
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 32,
+            "name": "I feed \"Total credit card limits\" as \"6000\"",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 147645
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 33,
+            "name": "I click on \"Work out how much I could borrow\" to calculate",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2241807
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 34,
+            "name": "I should see borrowing estimate as \"$305,000\"",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2252442
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 35,
+            "name": "I capture the current screen for reference",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1215345
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 36,
+            "name": "I click on \"Start over\" button",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1768668
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 37,
+            "name": "I capture the current screen for reference",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 359940
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 38,
+            "name": "I should see \"Application type\" as \"Single\"",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2802263
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 39,
+            "name": "I should see Number of dependants as \"0\"",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3606981
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 40,
+            "name": "I should see \"Property you would like to buy\" as \"Home to live in\"",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 399447
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 41,
+            "name": "It should display \"income (before tax)\" as \"0\"",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2065629
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 42,
+            "name": "It should display \"Your other income\" as \"0\"",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 354320
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 43,
+            "name": "It should show \"Living expenses\" as \"0\"",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10000630
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 44,
+            "name": "It should show \"Current home loan repayments\" as \"0\"",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 360836
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 45,
+            "name": "It should show \"Other loan repayments\" as \"0\"",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 132966
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 46,
+            "name": "It should display \"Other commitments\" as \"0\"",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:36"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 137990
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 47,
+            "name": "It should show \"Total credit card limits\" as \"0\"",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 110620
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 20
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "borrowing-capacity-calculator;test-3---test-to-capture-error-scenario",
+        "keyword": "Scenario",
+        "line": 51,
+        "name": "Test 3 - Test to capture error scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 52,
+            "name": "I launch borrowing capacity calculator application",
+            "match": {
+              "location": "setp-definitions/lauch_steps.ts:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 116372
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 53,
+            "name": "I select \"Single\" as application type",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:3"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 268863
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 54,
+            "name": "I select \"0\" as number of dependents",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 247256
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 55,
+            "name": "I select \"Home to live in\" as property you would like to buy",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 237893
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 56,
+            "name": "I enter \"Your income (before tax)\" as \"80000\"",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 136745
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 57,
+            "name": "I enter \"Your other income\" as \"10000\"",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 107553
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 58,
+            "name": "I feed \"Living expenses\" as \"500\"",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 128202.00000000001
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 59,
+            "name": "I feed \"Current home loan repayments\" as \"0\"",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 104836
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 60,
+            "name": "I feed \"Other loan repayments\" as \"140\"",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 100867
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 61,
+            "name": "I enter \"Other commitments\" as \"0\"",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:12"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 103921
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 62,
+            "name": "I feed \"Total credit card limits\" as \"10000\"",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 104619
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 63,
+            "name": "I click on \"Work out how much I could borrow\" to calculate",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:18"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 336916
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 64,
+            "name": "I should see borrowing estimate as \"$800,000\"",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 271484
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 65,
+            "name": "I capture the current screen for reference",
+            "match": {
+              "location": "setp-definitions/calculate_steps.ts:24"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 136674
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 50
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "borrowing-capacity-calculator",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Borrowing capacity calculator",
+    "tags": [],
+    "uri": "features/calculate.feature"
+  }
+]

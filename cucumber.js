@@ -1,13 +1,11 @@
-const del = require('del')
-
 console.log("All tests are executed from ", process.env.NODE_ENV, "environment")
 
 // execute all the test, if the feature file is not defined.
-const current_feature = process.env.FEATURE ? `./features/${process.env.FEATURE}.feature` : './feature/**/*.feature'
+const current_feature = process.env.FEATURE ? `./features/${process.env.FEATURE}.feature` : './features/**/*.feature'
 
 console.log("Executing current feature from ", current_feature)
 
-const current_tag = process.env.TAG ? `--tags ${process.env.TAG}` : '--tags @DEV'
+const current_tag = process.env.TAG ? `--tags ${process.env.TAG}` : '--tags @smoke'
 
 console.log("Executing current tags as ", current_tag)
 
@@ -21,7 +19,7 @@ let common = [
     '--require-module ts-node/register',
     current_parrellel_thread,
     current_feature,
-    '-r ./step_definitions/**/*.ts',
+    '-r ./setp-definitions/**/*.ts',
     '-r ./utils/**/*.ts',
     '--publish-quiet',
     `-f json:${output_file}`
