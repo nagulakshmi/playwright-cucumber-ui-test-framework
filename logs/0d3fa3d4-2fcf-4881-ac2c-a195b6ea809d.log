@@ -1,0 +1,5 @@
+[2023-11-23 00:04:23 [32minfo[39m]: Starting the testsuite execution
+[2023-11-23 00:04:23 [32minfo[39m]: Starting "chrome" browser for test execution
+[2023-11-23 00:04:24 [32minfo[39m]: Executing scenario: "Verify Single Borrower Calculation"
+[2023-11-23 00:04:24 [32minfo[39m]: Launch the application
+[2023-11-23 00:04:58 [32minfo[39m]: The status of the test case is:= FAILED

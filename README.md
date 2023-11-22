@@ -24,3 +24,5 @@ The below instruction helps users to switch between the browsers.
 #### Cucumber Default timeout
 * Cucumber default time out setting not working, when it is called from the hooks.
 * Refer the issue here: https://github.com/cucumber/cucumber-js/issues/1610
+
+![img.png](img.png)

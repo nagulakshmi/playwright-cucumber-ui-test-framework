@@ -1,46 +1,37 @@
 import calculatePage from "../pages/CalculatePage"
 import {When, Then} from "@cucumber/cucumber"
+import helper from "../utils/helper"
+import {OurWorld} from "../common/types"
+import ex = CSS.ex
 
 Then('I select {string} as application type', async (applicationType) => {
-    calculatePage.selectApplicationType(applicationType)
+    await calculatePage.selectApplicationType(applicationType)
 })
 
 Then('I select {string} as number of dependents', async (expectedValue) => {
-    calculatePage.selectDependentDropdown(expectedValue)
+    await calculatePage.selectDependentDropdown(expectedValue)
 })
 
 Then('I select {string} as property you would like to buy', async (propertyType) => {
-    calculatePage.selectPropertyType(propertyType)
+    await calculatePage.selectPropertyType(propertyType)
 })
 
 Then('I enter {string} as {string}', async (labelText, income) => {
-    calculatePage.enterIncomeBeforeTax(labelText, income)
+    await calculatePage.enterIncomeBeforeTax(labelText, income)
 })
 
-Then('I feed {string} as {string}', async (labelText, value) => {
-})
-
-When('I click on {string} to calculate', async (buttonName) => {
+When('I click on {string} to calculate', async (estimate: string) => {
+    await calculatePage.clickOnWorkoutBorrow()
 })
 
 Then('I should see borrowing estimate as {string}', async (borrowingEstimate) => {
+    await calculatePage.verifyEstimateOutcome(borrowingEstimate)
 })
 
-Then('I capture the current screen for reference', async () => {
+Then('I capture the current screen for reference', async function (this: OurWorld) {
+    await helper.captureScreenshot(this)
 })
 
-When('I click on {string} button', async (elementLabel) => {
-})
-
-Then('I should see {string} as {string}', async (question, expectedValue) => {
-})
-
-Then('I should see Number of dependants as {string}', async (value) => {
-})
-
-Then('It should display {string} as {string}', async (question, expectedValue) => {
-})
-
-Then('It should show {string} as {string}', async (labelText, expectedValue) => {
-
+When('I click on {string} button', async (startOver) => {
+    await calculatePage.clickOnStartOver()
 })

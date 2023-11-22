@@ -1,8 +1,10 @@
-import { After, AfterAll, Before, BeforeAll, ITestCaseHookParameter, setDefaultTimeout } from "@cucumber/cucumber"
+import {After, AfterAll, Before, BeforeAll, ITestCaseHookParameter, setDefaultTimeout, Status} from "@cucumber/cucumber"
 import logger from "../utils/logger"
 import scope from "./scope"
 import appConfig from "../utils/appConfig"
 import { chromium, firefox } from "playwright"
+import helper from "../utils/helper"
+import {OurWorld} from "./types"
 
 setDefaultTimeout(appConfig.cucumberTimeout)
 
@@ -18,7 +20,7 @@ BeforeAll(async function() {
 })
 
 AfterAll(async function () {
-    scope.browser.close()
+   await scope.browser.close()
 })
 
 Before(async function(testCase: ITestCaseHookParameter) {
@@ -33,13 +35,26 @@ Before(async function(testCase: ITestCaseHookParameter) {
     scope.page.setDefaultTimeout(appConfig.playwrightPageDefaultTimeout)
 })
 
-After(async function(testCase: ITestCaseHookParameter) {
-    logger.info("The status of the test case is:= %s", testCase.result?.status)    
+After(async function(this: OurWorld, testCase: ITestCaseHookParameter) {
+    logger.info("The status of the test case is:= %s", testCase.result?.status)
+    if (testCase.result?.status !== Status.PASSED) {
+        try {
+            await helper.captureScreenshot(this)
+        }
+        catch (err) {
+            logger.error("Unable to take screenshot, something went wrong")
+        }
+    }
+
+    await Promise.all([
+        scope.page.close(),
+        scope.context.close()
+    ])
 })
 
 const resolveBrowser = async() => {
 
-    const lanuchOptions: any = {
+    const launchOptions: any = {
         headless: appConfig.headless,
         slowMo: 0
     }
@@ -47,12 +62,12 @@ const resolveBrowser = async() => {
     logger.info("Starting \"%s\" browser for test execution", process.env.BROWSER_TYPE)
     switch(process.env.BROWSER_TYPE) {
         case 'chrome':
-            lanuchOptions.devtools = appConfig.devtools
-            lanuchOptions.channel = 'chrome'
-            scope.browser = await chromium.launch(lanuchOptions)
+            launchOptions.devtools = appConfig.devtools
+            launchOptions.channel = 'chrome'
+            scope.browser = await chromium.launch(launchOptions)
             break
         case 'firefox':
-            scope.browser = await firefox.launch(lanuchOptions)
+            scope.browser = await firefox.launch(launchOptions)
     }
 
 }

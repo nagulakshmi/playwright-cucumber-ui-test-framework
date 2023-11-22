@@ -1,0 +1,7 @@
+[2023-11-23 02:02:46 [32minfo[39m]: Starting the testsuite execution
+[2023-11-23 02:02:46 [32minfo[39m]: Starting "chrome" browser for test execution
+[2023-11-23 02:02:46 [32minfo[39m]: Executing scenario: "Start Joint Borrowing calculator"
+[2023-11-23 02:02:47 [32minfo[39m]: Launch the application
+[2023-11-23 02:03:54 [32minfo[39m]: Application launched successfully
+[2023-11-23 02:03:55 [32minfo[39m]: Waiting for 2 seconds to application to respond
+[2023-11-23 02:03:59 [32minfo[39m]: The status of the test case is:= FAILED

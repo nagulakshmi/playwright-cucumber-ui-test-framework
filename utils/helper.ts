@@ -1,5 +1,6 @@
 import scope from "../common/scope"
 import appConfig from "./appConfig"
+import { v4 as uuidv4 } from 'uuid'
 import logger from "./logger"
 
 class Helper {
@@ -11,7 +12,7 @@ class Helper {
         logger.info("Application launched successfully")
     }
 
-    //Hard wait method for local development, incase required.
+    //Hard wait method for local development, in case required.
     wait = async (seconds: number) => {
         logger.info("Waiting for %s seconds to application to respond", seconds)
         const sleep: any = (ms: number) => new Promise((r: any) => setTimeout(r, ms))
@@ -24,6 +25,11 @@ class Helper {
 
     selectDropdownOption = async(selector: string, value: string) => {
         await scope.page.selectOption(selector, value)
+    }
+
+    captureScreenshot = async (world) => {
+        const buffer: Buffer = await scope.page.screenshot({ path: `./screenshots/${uuidv4()}.png`, fullPage: true });
+        world.attach(buffer, 'image/png')
     }
 
 }
